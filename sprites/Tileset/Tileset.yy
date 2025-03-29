@@ -1,10 +1,10 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_chao",
+  "%Name":"Tileset",
   "bboxMode":0,
-  "bbox_bottom":67,
+  "bbox_bottom":95,
   "bbox_left":0,
-  "bbox_right":78,
+  "bbox_right":127,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,16 +12,17 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"515d9fba-3c09-4bb3-8b1d-3e94f07b82a4","name":"515d9fba-3c09-4bb3-8b1d-3e94f07b82a4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"1d278963-2ec8-447e-98c7-23d1d3ffa957","name":"1d278963-2ec8-447e-98c7-23d1d3ffa957","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"0e14379a-dd24-4a95-9349-7b488393a69d","name":"0e14379a-dd24-4a95-9349-7b488393a69d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":72,
+  "height":96,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"2447bc27-36a8-4059-83cd-d3cba7d0ac10","blendMode":0,"displayName":"default","isLocked":false,"name":"2447bc27-36a8-4059-83cd-d3cba7d0ac10","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"0d2b4a8e-f9d7-40ee-9f54-e49a14262079","blendMode":0,"displayName":"default","isLocked":false,"name":"0d2b4a8e-f9d7-40ee-9f54-e49a14262079","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_chao",
+  "name":"Tileset",
   "nineSlice":null,
   "origin":0,
   "parent":{
@@ -33,7 +34,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"spr_chao",
+    "%Name":"Tileset",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -49,7 +50,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":1.0,
+    "length":2.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -57,7 +58,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_chao",
+    "name":"Tileset",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,8 +70,11 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"515d9fba-3c09-4bb3-8b1d-3e94f07b82a4","path":"sprites/spr_chao/spr_chao.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"186da299-7f06-428c-baf7-1a541d3d9cd0","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1d278963-2ec8-447e-98c7-23d1d3ffa957","path":"sprites/Tileset/Tileset.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"050a2f8c-1762-4e09-bc8c-7342b32e2c7c","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0e14379a-dd24-4a95-9349-7b488393a69d","path":"sprites/Tileset/Tileset.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"4a48184a-72b6-4897-82f0-b8bd867ed4ef","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +90,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":79,
+  "width":128,
 }
