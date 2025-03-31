@@ -35,6 +35,7 @@
   "name":"Banana",
   "resources":[
     {"id":{"name":"o_chao","path":"objects/o_chao/o_chao.yy",},},
+    {"id":{"name":"o_inimigo","path":"objects/o_inimigo/o_inimigo.yy",},},
     {"id":{"name":"o_parede","path":"objects/o_parede/o_parede.yy",},},
     {"id":{"name":"o_player","path":"objects/o_player/o_player.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
