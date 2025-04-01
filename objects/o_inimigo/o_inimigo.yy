@@ -27,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"Onion_34x34",
-    "path":"sprites/Onion_34x34/Onion_34x34.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
