@@ -41,6 +41,7 @@
     {"id":{"name":"o_chao","path":"objects/o_chao/o_chao.yy",},},
     {"id":{"name":"o_parede","path":"objects/o_parede/o_parede.yy",},},
     {"id":{"name":"o_player","path":"objects/o_player/o_player.yy",},},
+    {"id":{"name":"o_spawner","path":"objects/o_spawner/o_spawner.yy",},},
     {"id":{"name":"o_tomate","path":"objects/o_tomate/o_tomate.yy",},},
     {"id":{"name":"Inicio","path":"rooms/Inicio/Inicio.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},

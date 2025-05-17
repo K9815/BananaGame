@@ -13,3 +13,6 @@ draw_rectangle(20, 20, 20 + largura_barra, 40, false);
 // Texto
 draw_set_color(c_white);
 draw_text(20, 45, string(vida) + " / " + string(vida_max));
+
+
+

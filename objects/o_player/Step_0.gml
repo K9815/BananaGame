@@ -32,14 +32,14 @@ switch (state) {
             image_speed = 0.6;
         }
 
-        // Dano (detecção direta)
+
         if (tempo_invencivel > 0) {
             tempo_invencivel -= 1;
         }
 
         if (place_meeting(x, y, o_cenoura) && tempo_invencivel <= 0) {
-            tomar_dano(30);
-            tempo_invencivel = 30; // 30 frames de invencibilidade
+            tomar_dano(20);
+            tempo_invencivel = 30;
         }
         #endregion
         break;

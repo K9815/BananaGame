@@ -16,7 +16,7 @@ switch (state) {
         contador_ataque += 1;
         if (contador_ataque >= tempo_entre_ataques) {
             contador_ataque = 0;
-            tempo_entre_ataques = irandom_range(60, 120); 
+            tempo_entre_ataques = irandom_range(60, 150); 
             alvo = instance_nearest(x, y, o_player);
             state = "attack";
         }
@@ -28,9 +28,9 @@ switch (state) {
 
 	    if (alvo != noone) {
 	        if (alvo.x < x) {
-	            image_xscale = 1.5;
+	            image_xscale = 1;
 	        } else {
-	            image_xscale = -1.5;
+	            image_xscale = -1;
 	        }
 
 	        var dir = point_direction(x, y, alvo.x, alvo.y);
@@ -39,7 +39,7 @@ switch (state) {
 	    }
 
 	    contador_ataque += 1;
-	    if (contador_ataque > 30) {
+	    if (contador_ataque > 40) {
 	        contador_ataque = 0;
 	        state = "idle";
 	        sprite_index = spr_cenidle;
@@ -66,8 +66,11 @@ if (jogador != noone)
     {
         if (!ataque_recebido)
         {
-            tomar_dano_cenoura(25); 
+            tomar_dano_cenoura(50); 
             ataque_recebido = true;
+				if (instance_exists(o_spawner)) {
+			    o_spawner.inimigos_derrotados += 1;
+			}
         }
     }
     else

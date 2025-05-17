@@ -29,9 +29,9 @@ switch (state) {
 	    if (alvo != noone) {
 	        // Virar para o lado do jogador
 	        if (alvo.x < x) {
-	            image_xscale = 1.5;
+	            image_xscale = 1;
 	        } else {
-	            image_xscale = -1.5;
+	            image_xscale = -1;
 	        }
 
 	        // Movimento em direção ao jogador
@@ -77,6 +77,9 @@ if (jogador != noone)
         {
             tomar_dano_tomate(50); 
             ataque_recebido = true;
+			if (instance_exists(o_spawner)) {
+			    o_spawner.inimigos_derrotados += 1;
+			}
         }
     }
     else
