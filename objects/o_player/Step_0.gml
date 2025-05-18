@@ -37,10 +37,6 @@ switch (state) {
             tempo_invencivel -= 1;
         }
 
-        if (place_meeting(x, y, o_cenoura) && tempo_invencivel <= 0) {
-            tomar_dano(20);
-            tempo_invencivel = 30;
-        }
         #endregion
         break;
 

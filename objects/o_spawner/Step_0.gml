@@ -14,7 +14,20 @@ if (contador_spawn >= tempo_spawn) {
 
 if (inimigos_derrotados >= inimigos_por_wave && wave_em_progresso) {
     wave_em_progresso = false;
-    
-    // Espera alguns segundos antes de iniciar a próxima wave (opcional)
-    alarm[0] = 120; // 2 segundos, por exemplo
+
+    // Mata todos os inimigos existentes ao fim da wave
+    with (o_cenoura) {
+	    if (state != "morte") {
+	        state = "morte";
+	    }
+	}
+
+	with (o_tomate) {
+	    if (state != "morte") {
+	        state = "morte";
+	    }
+	}
+
+    // Espera alguns segundos antes de iniciar a próxima wave
+    alarm[0] = 300; 
 }

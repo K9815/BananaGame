@@ -1,4 +1,3 @@
-
 image_speed = 0.2;
 
 // Estado inicial
@@ -24,3 +23,16 @@ function tomar_dano(valor) {
         }
     }
 }
+
+// Sistema de Habilidades
+upgrade_ataque_veloz = 0;
+upgrade_corrente = 0;
+inimigos_derrotados_para_vamp = 0;
+upgrade_vampirismo = 0;
+upgrade_resistencia = 0;
+upgrade_vida_max = 0;
+
+// Vida base e vida atual
+vida_maxima_base = 100;
+vida_maxima = vida_maxima_base;
+vida_atual = vida_maxima;

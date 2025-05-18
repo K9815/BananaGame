@@ -36,6 +36,16 @@ switch (state) {
 	        var dir = point_direction(x, y, alvo.x, alvo.y);
 	        x += lengthdir_x(velocidade, dir);
 	        y += lengthdir_y(velocidade, dir);
+
+	        // Causar dano ao jogador se estiver em contato e não estiver invencível
+	        if (place_meeting(x, y, alvo) && alvo.tempo_invencivel <= 0) {
+	            if (!ataque_recebido) {
+	                alvo.tomar_dano(20);
+	                ataque_recebido = true;
+	            }
+	        } else {
+	            ataque_recebido = false;
+	        }
 	    }
 
 	    contador_ataque += 1;
@@ -54,27 +64,25 @@ switch (state) {
 
 }
 
+if (!morrendo) {
+    var jogador = instance_nearest(x, y, o_player);
 
-var jogador = instance_nearest(x, y, o_player);
-
-if (jogador != noone)
-{
-    if (place_meeting(x, y, jogador) &&
-        jogador.state == "attack one" &&
-        jogador.sprite_index == spr_platq &&
-        jogador.image_index >= 1 && jogador.image_index <= 2) 
+    if (jogador != noone)
     {
-        if (!ataque_recebido)
+        if (place_meeting(x, y, jogador) &&
+            jogador.state == "attack one" &&
+            jogador.sprite_index == spr_platq &&
+            jogador.image_index >= 1 && jogador.image_index <= 2)
         {
-            tomar_dano_cenoura(50); 
-            ataque_recebido = true;
-				if (instance_exists(o_spawner)) {
-			    o_spawner.inimigos_derrotados += 1;
-			}
+            if (!ataque_recebido)
+            {
+                tomar_dano_cenoura(50); 
+                ataque_recebido = true;
+            }
         }
-    }
-    else
-    {
-        ataque_recebido = false; 
+        else
+        {
+            ataque_recebido = false; 
+        }
     }
 }
