@@ -5,7 +5,7 @@ if (contador_spawn >= tempo_spawn) {
 
     var tipo = choose(o_cenoura, o_tomate);
 
-    // Gera uma posição aleatória dentro da faixa permitida
+    // Gera uma posição aleatória dentro do espaço
     var spawn_x = irandom_range(30, 1250);
     var spawn_y = o_player.y;
 
@@ -28,6 +28,6 @@ if (inimigos_derrotados >= inimigos_por_wave && wave_em_progresso) {
 	    }
 	}
 
-    // Espera alguns segundos antes de iniciar a próxima wave
+    // Segundos antes de iniciar a próxima wave
     alarm[0] = 300; 
 }

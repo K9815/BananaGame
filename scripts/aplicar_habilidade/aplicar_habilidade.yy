@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"aplicar_habilidade",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"aplicar_habilidade",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
