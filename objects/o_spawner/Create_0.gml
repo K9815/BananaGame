@@ -1,47 +1,41 @@
-tempo_spawn = 90; 
-contador_spawn = 0;
-
-lista_inimigos = [ o_cenoura, o_tomate ];
-
+// Variáveis do Spawner e do Jogo
 wave_atual = 1;
+inimigos_por_wave = 1;
 inimigos_derrotados = 0;
-inimigos_por_wave = 5; // Aumenta a cada wave
 wave_em_progresso = true;
+contador_spawn = 0;
+tempo_spawn = 60; // 1 segundo = 60 frames
+global.jogo_pausado = false; //Pausar ou Despausar
 
-habilidades = [
+global.todas_habilidades = [
     {
-        nome: "Velocidade de Ataque",
-        tipo: "velocidade_ataque",
-        nivel: 0,
-        max_nivel: 5,
-        sprite: VelocidadeAtaque
-    },
-    {
+        sprite: CorrenteEletrica,
         nome: "Corrente Elétrica",
-        tipo: "corrente_eletrica",
-        nivel: 0,
-        max_nivel: 5,
-        sprite: CorrenteEletrica
+        descricao: "Seus ataques têm chance de causar dano em área.",
+        script_aplicar: scr_correnteele
     },
     {
-        nome: "Vampirismo",
-        tipo: "vampirismo",
-        nivel: 0,
-        max_nivel: 5,
-        sprite: Vampirismo
-    },
-    {
+        sprite: ResistenciaAumentada,
         nome: "Resistência Aumentada",
-        tipo: "resistencia",
-        nivel: 0,
-        max_nivel: 5,
-        sprite: ResistenciaAumentada
+        descricao: "Reduz o dano recebido em 10%.",
+        script_aplicar: scr_resisau
     },
     {
+        sprite: Vampirismo,
+        nome: "Vampirismo",
+        descricao: "Cura 15% do dano causado.",
+        script_aplicar: scr_vamp
+    },
+    {
+        sprite: VelocidadeAtaque,
+        nome: "Velocidade de Ataque",
+        descricao: "Aumenta sua velocidade de ataque.",
+        script_aplicar: scr_velatq
+    },
+    {
+        sprite: VidaAumentada,
         nome: "Vida Aumentada",
-        tipo: "vida_maxima",
-        nivel: 0,
-        max_nivel: 5,
-        sprite: VidaAumentada
+        descricao: "Aumenta sua vida máxima em 20%.",
+        script_aplicar: scr_vidaau
     }
 ];

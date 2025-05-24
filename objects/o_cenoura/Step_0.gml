@@ -1,3 +1,8 @@
+if (global.jogo_pausado) {
+    image_speed = 0; // Pausa a animação da sprite, mas mantém o frame atual
+    exit; // Impede movimento, ataque, etc.
+}
+
 if (tempo_dano > 0 && !morrendo) {
     tempo_dano -= 1;
 

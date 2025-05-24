@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"aplicar_upgrade",
+  "%Name":"scr_resisau",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"aplicar_upgrade",
+  "name":"scr_resisau",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

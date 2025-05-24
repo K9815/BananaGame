@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"aplicar_habilidade",
+  "%Name":"scr_vamp",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"aplicar_habilidade",
+  "name":"scr_vamp",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",
