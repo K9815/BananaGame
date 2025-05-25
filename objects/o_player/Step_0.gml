@@ -3,7 +3,6 @@ if (global.jogo_pausado) {
     exit; // Impede movimento, ataque, etc.
 }
 
-
 switch (state) {
     case "move":
         #region Move State

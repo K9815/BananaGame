@@ -20,10 +20,6 @@ var start_x_for_first_card_left_edge = (display_get_gui_width() / 2) - (total_wi
 
 var card_base_y = display_get_gui_height() / 2 - 170;
 
-var current_mouse_gui_x = device_mouse_x_to_gui(0);
-var current_mouse_gui_y = device_mouse_y_to_gui(0);
-
-
 for (var i = 0; i < num_habilidades; i++) {
     var habilidade_info = habilidades_exibidas[i];
     var spr = habilidade_info.sprite;
@@ -48,9 +44,8 @@ for (var i = 0; i < num_habilidades; i++) {
     draw_rectangle(rect_left, rect_top, rect_right, rect_bottom, false);
     draw_set_alpha(1);
 
-    var mouse_over = point_in_rectangle(current_mouse_gui_x, current_mouse_gui_y, rect_left, rect_top, rect_right, rect_bottom);
-
-    if (mouse_over) {
+    // Realça a habilidade baseada na variável 'selecionada'
+    if (i == selecionada) { 
         draw_set_color(c_yellow);
         draw_rectangle(rect_left - 4, rect_top - 4, rect_right + 4, rect_bottom + 4, false);
     }

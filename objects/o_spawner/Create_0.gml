@@ -1,11 +1,11 @@
 // Variáveis do Spawner e do Jogo
-wave_atual = 1;
-inimigos_por_wave = 1;
+wave_atual = 1; // Representa a wave atual que está em progresso ou prestes a começar.
+inimigos_por_wave = 1; // Para a primeira wave
 inimigos_derrotados = 0;
-wave_em_progresso = true;
+wave_em_progresso = true; // Começa true para iniciar a primeira wave
 contador_spawn = 0;
 tempo_spawn = 60; // 1 segundo = 60 frames
-global.jogo_pausado = false; //Pausar ou Despausar
+global.jogo_pausado = false; // Pausar ou Despausar
 
 global.todas_habilidades = [
     {

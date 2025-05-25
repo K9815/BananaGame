@@ -3,6 +3,7 @@ if (global.jogo_pausado) {
     exit; // Impede movimento, ataque, etc.
 }
 
+
 if (tempo_dano > 0 && !morrendo) {
     tempo_dano -= 1;
 
