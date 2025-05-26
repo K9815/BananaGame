@@ -23,7 +23,7 @@ else if (global.jogo_pausado == false && !wave_em_progresso && !instance_exists(
     show_debug_message("Spawner Alarm 0 (Fase 2): Habilidade selecionada. Iniciando Wave " + string(wave_atual) + ".");
 
     // Garante que o jogo está despausado ANTES de iniciar a próxima wave
-    global.jogo_pausado = false; // <<< ADICIONE ESTA LINHA NOVAMENTE AQUI
+    global.jogo_pausado = false; 
 
     inimigos_por_wave = 5 + (wave_atual * 2); 
     inimigos_derrotados = 0; 
