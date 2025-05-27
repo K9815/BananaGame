@@ -28,10 +28,11 @@ if (num_habilidades > 0) {
             // Mude para 1 para que a próxima fase da lógica de wave inicie no próximo frame do spawner
             o_spawner.alarm[0] = 1; 
         }
+		
+        global.jogo_pausado = false;
         
         // Destrói o objeto de seleção de habilidade
         instance_destroy();
         
-        global.jogo_pausado = false;
     }
 }

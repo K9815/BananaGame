@@ -1,17 +1,12 @@
-// Posição fixa do centro do joystick na tela (GUI)
-joystick_center_x = 150;
-joystick_center_y = display_get_gui_height() - 150;
+event_inherited();
 
-// Posição atual do "botão" do joystick
-stick_x = joystick_center_x;
-stick_y = joystick_center_y;
+joy_x = 0;
+joy_y = 0;
+touch_id = -1;
 
-// Raio máximo que o botão pode se mover
-joystick_radius = 60;
+radius = sprite_width / 2;
 
-// Direção horizontal final (-1 = esquerda, 0 = parado, 1 = direita)
-move_x = 0;
-
-// Controle de toque
-finger_id = -1;
-is_dragging = false;
+input = function (_touch_id, _touch_x, _touch_y)
+{
+        touch_id = _touch_id;
+}
