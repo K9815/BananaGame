@@ -4,16 +4,13 @@
 if (global.jogo_pausado) {
     image_speed = 0;
     exit;
-}
+} 
 
 switch (state) {
     case "move":
         #region Move State
         var speedmov = 3; // Sua velocidade de movimento base
 
-        // --- Pega Input ---
-        
-        // --- ADICIONADO: Pega o input do Joystick ---
         var _joy_h = 0; // Inicializa com 0
         if (instance_exists(o_joystick)) { // Verifica se o joystick existe
             var _jx = o_joystick.joy_x;    // Pega o deslocamento X do "thumb" do joystick
@@ -22,9 +19,7 @@ switch (state) {
                 _joy_h = _jx / _jr; // Calcula o input H normalizado (-1 a 1)
             }
         }
-        // --- FIM DA ADIÇÃO ---
-
-        // Teclado (para testes no PC)
+		//teclado pc
         var _keyb_h = keyboard_check(vk_right) - keyboard_check(vk_left);
 
         // Combina os inputs (dando prioridade ao maior, ou some se preferir)
@@ -47,7 +42,7 @@ switch (state) {
         }
 
         // --- Animação ---
-        if (_h_input != 0) {
+         if (_h_input != 0) {
             sprite_index = spr_plwalk;
             image_speed = 0.2;
             image_xscale = sign(_h_input) * 2;
@@ -56,15 +51,12 @@ switch (state) {
             image_speed = 0.2;
         }
 
-        // --- Ataque (Mantém o aviso para mobile) ---
-        // A linha abaixo usa o teclado (LShift). Isso NÃO vai funcionar
-        // no celular. Criar um BOTÃO de ataque na tela
-        // e verificar o toque nele, similar ao joystick.
-        if (global.ataque_pressionado) {      // <<< MUDANÇA AQUI
-	        image_index = 0;
-	        state = "attack one";
-	        image_speed = 0.6;
-	    }
+        // --- VERIFICA O ATAQUE ---
+        if (global.ataque_pressionado || keyboard_check_pressed(vk_lshift)) {
+            image_index = 0;
+            state = "attack one";
+            image_speed = 0.6;
+        }
 
         if (tempo_invencivel > 0) {
             tempo_invencivel -= 1;

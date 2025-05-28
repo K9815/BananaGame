@@ -1,6 +1,8 @@
 if (global.jogo_pausado) {
     image_speed = 0; // Pausa a animação da sprite, mas mantém o frame atual
     exit; // Impede movimento, ataque, etc.
+} else {
+    image_speed = image_speed_base;
 }
 
 

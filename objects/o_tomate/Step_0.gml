@@ -1,6 +1,8 @@
 if (global.jogo_pausado) {
     image_speed = 0; // Pausa a animação da sprite, mas mantém o frame atual
     exit; // Impede movimento, ataque, etc.
+} else {
+    image_speed = image_speed_base;
 }
 
 if (tempo_dano > 0 && !morrendo) {
@@ -16,7 +18,7 @@ if (tempo_dano > 0 && !morrendo) {
 switch (state) {
     case "idle":
         sprite_index = spr_tomidle;
-        image_speed = 0.2;
+        image_speed_base = 0.2;
         
         contador_ataque += 1;
         if (contador_ataque >= tempo_entre_ataques) {
@@ -29,7 +31,7 @@ switch (state) {
 
 	    case "attack":
 	    sprite_index = spr_tomatq;
-	    image_speed = 0.4;
+	    image_speed_base = 0.4;
 
 	    if (alvo != noone) {
 	        // Virar para o lado do jogador

@@ -1,5 +1,8 @@
 event_inherited();
 
+x = 150;
+y = display_get_gui_height() - sprite_height - 30;
+
 joy_x = 0;
 joy_y = 0;
 touch_id = -1;

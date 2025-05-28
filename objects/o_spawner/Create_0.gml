@@ -1,6 +1,6 @@
 // Variáveis do Spawner e do Jogo
 wave_atual = 1; // Representa a wave atual que está em progresso ou prestes a começar.
-inimigos_por_wave = 1; // Para a primeira wave
+inimigos_por_wave = 4; // Para a primeira wave
 inimigos_derrotados = 0;
 wave_em_progresso = true; // Começa true para iniciar a primeira wave
 contador_spawn = 0;
@@ -39,3 +39,4 @@ global.todas_habilidades = [
         script_aplicar: scr_vidaau
     }
 ];
+

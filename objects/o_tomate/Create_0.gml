@@ -10,7 +10,7 @@ contador_ataque = 0;
 ataque_recebido = false;
 morrendo = false; 
 tempo_dano = 0;
-
+image_speed_base = 0.2;
 
 function tomar_dano_tomate(valor) {
     if (morrendo) return;
