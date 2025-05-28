@@ -60,11 +60,11 @@ switch (state) {
         // A linha abaixo usa o teclado (LShift). Isso NÃO vai funcionar
         // no celular. Criar um BOTÃO de ataque na tela
         // e verificar o toque nele, similar ao joystick.
-        if (keyboard_check_pressed(vk_lshift)) {
-            image_index = 0;
-            state = "attack one";
-            image_speed = 0.6;
-        }
+        if (global.ataque_pressionado) {      // <<< MUDANÇA AQUI
+	        image_index = 0;
+	        state = "attack one";
+	        image_speed = 0.6;
+	    }
 
         if (tempo_invencivel > 0) {
             tempo_invencivel -= 1;
@@ -83,6 +83,7 @@ switch (state) {
         }
         #endregion
         break;
+		
 
     case "dead":
         #region Dead State
@@ -92,4 +93,18 @@ switch (state) {
         }
         #endregion
         break;
+}
+
+function tomar_dano(valor) { //FUNÇÃO DE RECEBER DANO, SERVIRÁ TANTO PRO PLAYER QUANTO PROS INIMIGOS , NÃO APAGAR
+    if (tempo_invencivel <= 0) {
+        vida_atual -= valor;
+        tempo_invencivel = 60;
+
+       if (vida_atual <= 0) {
+            state = "dead";
+            image_index = 0;
+            sprite_index = spr_pldeath; 
+            image_speed = 0.2;
+        }
+    }
 }

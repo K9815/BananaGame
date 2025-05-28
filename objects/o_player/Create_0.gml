@@ -1,19 +1,5 @@
 image_speed = 0.2;
 
-function tomar_dano(valor) { //FUNÇÃO DE RECEBER DANO, SERVIRÁ TANTO PRO PLAYER QUANTO PROS INIMIGOS , NÃO APAGAR
-    if (tempo_invencivel <= 0) {
-        vida_atual -= valor;
-        tempo_invencivel = 30;
-
-       if (vida_atual <= 0) {
-            state = "dead";
-            image_index = 0;
-            sprite_index = spr_pldeath; 
-            image_speed = 0.2;
-        }
-    }
-}
-
 // Vida
 vida_maxima = 100;
 vida_atual = vida_maxima;
