@@ -49,7 +49,7 @@ switch (state) {
 	        // Causar dano ao jogador
 	        if (place_meeting(x, y, alvo)) {
 	            with (alvo) {
-	                tomar_dano(50); 
+	                tomar_dano(30); 
 	            }
 	        }
 	    }

@@ -6,6 +6,7 @@ if (global.jogo_pausado) {
     exit;
 } 
 
+
 switch (state) {
     case "move":
         #region Move State

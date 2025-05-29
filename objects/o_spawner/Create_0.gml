@@ -11,7 +11,7 @@ global.todas_habilidades = [
     {
         sprite: CorrenteEletrica,
         nome: "Corrente Elétrica",
-        descricao: "Seus ataques têm chance de causar dano em área.",
+        descricao: "Inimigos derrotados soltam um raio que irá bater em inimigos a volta.",
         script_aplicar: scr_correnteele
     },
     {

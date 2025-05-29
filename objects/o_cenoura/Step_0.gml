@@ -6,15 +6,12 @@ if (global.jogo_pausado) {
 }
 
 
-if (tempo_dano > 0 && !morrendo) {
-    tempo_dano -= 1;
-
-    if (tempo_dano == 0) {
-        if (state != "attack") {
-            state = "idle";
-        }
+if (tempo_dano == 0 && sprite_index == spr_cenhurt) {
+    if (state != "attack") {
+        state = "idle";
     }
 }
+
 
 switch (state) {
     case "idle":
@@ -48,7 +45,7 @@ switch (state) {
 	        // Causar dano ao jogador se estiver em contato e não estiver invencível
 	        if (place_meeting(x, y, alvo) && alvo.tempo_invencivel <= 0) {
 	            if (!ataque_recebido) {
-	                alvo.tomar_dano(20);
+	                tomar_dano_cenoura(20);
 	                ataque_recebido = true;
 	            }
 	        } else {

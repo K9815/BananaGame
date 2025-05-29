@@ -22,3 +22,5 @@ chance_vampirismo = 0.0;
 
 // Corrente Elétrica
 has_corrente_eletrica = false;
+qtd_corrente_eletrica = 0;
+correnteele_nivel = 0;

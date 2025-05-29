@@ -19,7 +19,7 @@ function tomar_dano_cenoura(valor) {
 
     sprite_index = spr_cenhurt;
     image_index = 0;
-    image_speed = 0.4;
+    image_speed = 0.3;
     tempo_dano = 15; 
 
     if (vida_atual <= 0) {
@@ -28,6 +28,13 @@ function tomar_dano_cenoura(valor) {
         sprite_index = spr_cendeath;
         image_index = 0;
         image_speed = 0.3;
-    }
+		
+		 // ⚡ CORRENTE ELÉTRICA
+    if (instance_exists(o_player) && o_player.has_corrente_eletrica) {
+        var quantidade = o_player.qtd_corrente_eletrica; // Quantos inimigos atingirá
+        var dano = 20; // Ou algo que escale
+        var raio = 96; // Alcance do raio
+         script_execute(scr_corrente_dano_ao_redor, x, y, raio, quantidade, dano);
+	    }
+	}
 }
-
