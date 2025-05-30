@@ -21,6 +21,7 @@ for (var i = 0; i < _max_devices; i++)
             {
                 global.ataque_pressionado = true;
                 show_debug_message("o_btnatq PRESSIONADO! Touch ID: " + string(i));
+				
             }
 
             // Se está SENDO SEGURADO neste botão (chama a função 'input' dele)
