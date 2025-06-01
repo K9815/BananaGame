@@ -36,6 +36,7 @@
   "name":"Banana",
   "resources":[
     {"id":{"name":"f_ability_desc","path":"fonts/f_ability_desc/f_ability_desc.yy",},},
+    {"id":{"name":"font_menu_pausa","path":"fonts/font_menu_pausa/font_menu_pausa.yy",},},
     {"id":{"name":"font_menu","path":"fonts/font_menu/font_menu.yy",},},
     {"id":{"name":"HUD","path":"objects/HUD/HUD.yy",},},
     {"id":{"name":"o_btn_cont","path":"objects/o_btn_cont/o_btn_cont.yy",},},
