@@ -4,5 +4,5 @@ if state == "attack one"{
 }
 
 if state == "dead" {
-	room_restart();
+	instance_create_layer(display_get_gui_width()/2, display_get_gui_height()/2, "GUI", o_tela_morte);
 }

@@ -28,7 +28,7 @@ btn_cont.altura = btn_cont.sprite_height * escala;
 
 // Centraliza horizontalmente o botão, mas ajusta manualmente com "/23" para corrigir alinhamento
 btn_cont.x -= btn_cont.largura / 80;
-btn_cont.y -= btn_cont.altura / 10; // Centraliza verticalmente baseado na altura escalada
+btn_cont.y -= btn_cont.altura / 23; // Centraliza verticalmente baseado na altura escalada
 
 // === BOTÃO "Sair para o Menu" ===
 
@@ -41,4 +41,4 @@ btn_sair.altura = btn_sair.sprite_height * escala;
 
 // Aplica o mesmo ajuste de alinhamento do botão anterior
 btn_sair.x -= btn_sair.largura / 80;
-btn_sair.y -= btn_sair.altura / 10;
+btn_sair.y -= btn_sair.altura / 23;
