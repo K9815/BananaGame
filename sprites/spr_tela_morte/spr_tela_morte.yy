@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_tela_morte",
   "bboxMode":0,
-  "bbox_bottom":127,
+  "bbox_bottom":122,
   "bbox_left":0,
   "bbox_right":63,
   "bbox_top":0,

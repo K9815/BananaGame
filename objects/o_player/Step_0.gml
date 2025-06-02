@@ -82,8 +82,7 @@ switch (state) {
         #region Dead State
         // Supondo que você tenha uma animação de morte
         if (image_index >= image_number - 1) { // Quando a animação de morte terminar
-            instance_create_layer(display_get_gui_width()/2, display_get_gui_height()/2, "GUI", o_tela_morte);
-        }
+		}
         #endregion
         break;
 }

@@ -4,5 +4,8 @@ if state == "attack one"{
 }
 
 if state == "dead" {
-	instance_create_layer(display_get_gui_width()/2, display_get_gui_height()/2, "GUI", o_tela_morte);
+	  if (!global.jogo_pausado) {
+            global.jogo_pausado = true;
+			instance_create_layer(display_get_gui_width()/2, display_get_gui_height()/2, "GUI", o_tela_morte);
+			}
 }

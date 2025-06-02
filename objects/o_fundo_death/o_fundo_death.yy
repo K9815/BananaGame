@@ -9,8 +9,8 @@
   "name":"o_fundo_death",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"fundos",
+    "path":"folders/Objetos/fundos.yy",
   },
   "parentObjectId":null,
   "persistent":false,

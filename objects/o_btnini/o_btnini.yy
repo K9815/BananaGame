@@ -6,8 +6,8 @@
   "name":"o_btnini",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"botões",
+    "path":"folders/Objetos/botões.yy",
   },
   "parentObjectId":null,
   "persistent":false,

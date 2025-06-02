@@ -2,7 +2,6 @@ var fator = 0.3;
 var largura_hitbox = largura * fator;
 var altura_hitbox = altura * fator;
 
-
 if (device_mouse_check_button_pressed(0, mb_left)) {
     var mx = device_mouse_x_to_gui(0);
     var my = device_mouse_y_to_gui(0);
@@ -11,7 +10,13 @@ if (device_mouse_check_button_pressed(0, mb_left)) {
         x - largura_hitbox / 2, y - altura_hitbox / 2,
         x + largura_hitbox / 2, y + altura_hitbox / 2)) {
 
-        // Reinicia a room atual
-        room_restart();
+        // Impede múltiplos cliques
+        if (!global.recomecar_acionado) {
+            global.recomecar_acionado = true;
+
+            show_debug_message("Reiniciando jogo...");
+            alarm[0] = 1;
+
+        }
     }
 }
