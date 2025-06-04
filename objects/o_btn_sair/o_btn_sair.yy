@@ -1,16 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"o_game_controller",
+  "%Name":"o_btn_sair",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":5,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"o_game_controller",
+  "name":"o_btn_sair",
   "overriddenProperties":[],
   "parent":{
-    "name":"controllers",
-    "path":"folders/Objetos/controllers.yy",
+    "name":"botões",
+    "path":"folders/Objetos/botões.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,7 +31,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_btn_menu",
+    "path":"sprites/spr_btn_menu/spr_btn_menu.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

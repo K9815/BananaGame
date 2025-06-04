@@ -13,10 +13,15 @@ if (device_mouse_check_button_pressed(0, mb_left)) {
         // Impede múltiplos cliques
         if (!global.recomecar_acionado) {
             global.recomecar_acionado = true;
-
             show_debug_message("Reiniciando jogo...");
-            alarm[0] = 1;
-
-        }
-    }
+            global.jogo_pausado = false;
+			if (room != Room1) {
+				show_debug_message("mec");
+			    room_goto(Room1);
+			} else {
+			    room_restart(); // reinicia Room1 se já estiver nela
+				show_debug_message("a");
+}
+		}
+		}
 }
