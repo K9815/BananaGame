@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":88.03265,
+  "duration":8.135601,
   "name":"som_gameplay",
   "parent":{
     "name":"Sounds",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"som_gameplay.mp3",
+  "soundFile":"som_gameplay.wav",
   "type":0,
-  "volume":0.26,
+  "volume":0.9,
 }

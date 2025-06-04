@@ -11,7 +11,7 @@ switch (state) {
     case "move":
         #region Move State
         var speedmov = 3; // Sua velocidade de movimento base
-
+		
         var _joy_h = 0; // Inicializa com 0
         if (instance_exists(o_joystick)) { // Verifica se o joystick existe
             var _jx = o_joystick.joy_x;    // Pega o deslocamento X do "thumb" do joystick
@@ -44,6 +44,10 @@ switch (state) {
 
         // --- Animação ---
          if (_h_input != 0) {
+			 if (global.efeitos_ativos) {
+			audio_play_sound(som_andarpl, 1, false);
+			
+		}
             sprite_index = spr_plwalk;
             image_speed = 0.2;
             image_xscale = sign(_h_input) * 2;
@@ -68,6 +72,9 @@ switch (state) {
 
     case "attack one":
         #region Attack State
+		 if (global.efeitos_ativos) {
+			audio_play_sound(som_atqpl, 1, false);
+		}
         sprite_index = spr_platq; // Seu sprite de ataque
         image_speed = 0.6;
 
@@ -88,7 +95,11 @@ switch (state) {
 }
 
 function tomar_dano(valor) { //FUNÇÃO DE RECEBER DANO, SERVIRÁ TANTO PRO PLAYER QUANTO PROS INIMIGOS , NÃO APAGAR
-    if (tempo_invencivel <= 0) {
+    if (global.efeitos_ativos) {
+			audio_play_sound(som_danopl, 1, false);
+		}
+	
+	if (tempo_invencivel <= 0) {
         vida_atual -= valor;
         tempo_invencivel = 60;
 

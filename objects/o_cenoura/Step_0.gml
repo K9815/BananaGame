@@ -28,6 +28,9 @@ switch (state) {
         break;
 
 	    case "attack":
+		 if (global.efeitos_ativos) {
+			audio_play_sound(som_atqcen, 1, false);
+		}
 	    sprite_index = spr_cenatq;
 	    image_speed = 0.4;
 
@@ -62,6 +65,9 @@ switch (state) {
 	    break;
 		
 		case "morte":
+		if (global.efeitos_ativos) {
+			audio_play_sound(som_danopl, 1, false);
+		}
 	    if (image_index >= image_number - 1) {
 	        instance_destroy();
 	    }
@@ -79,6 +85,9 @@ if (!morrendo) {
             jogador.sprite_index == spr_platq &&
             jogador.image_index >= 1 && jogador.image_index <= 2)
         {
+			if (global.efeitos_ativos) {
+			audio_play_sound(som_danopl, 1, false);
+		}
             if (!ataque_recebido)
             {
                 tomar_dano_cenoura(50); 

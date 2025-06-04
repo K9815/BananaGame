@@ -12,13 +12,11 @@ if (device_mouse_check_button_pressed(0, mb_left)) {
         x - largura_hitbox / 2, y - altura_hitbox / 2,
         x + largura_hitbox / 2, y + altura_hitbox / 2)) {
         
-        if (texto == "Iniciar") {
-            if (global.efeitos_ativos) {
-	    audio_play_sound(som_btn, 1, false);
-	}
+        global.efeitos_ativos = !global.efeitos_ativos;
 
-			room_goto(Room1);
-			
+        // Se quiser som de clique, só toca se ainda estiver ativado após o toggle
+        if (global.efeitos_ativos) {
+            audio_play_sound(som_btn, 1, false);
         }
     }
 }

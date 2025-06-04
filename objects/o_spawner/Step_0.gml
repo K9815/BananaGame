@@ -20,7 +20,10 @@ if (inimigos_derrotados >= inimigos_por_wave && wave_em_progresso) {
 
     // PAUSA o jogo E DISPARA O ALARME 0 para gerenciar a próxima fase (seleção de habilidade)
     global.jogo_pausado = true;
-    
+    if (global.efeitos_ativos) {
+			audio_play_sound(som_selecaohab, 1, false);
+		}
+	
     // Este alarme agora será responsável por mostrar a tela de habilidades e depois reiniciar a wave
     alarm[0] = 1; // Dispara o alarme 0 no próximo frame.
                   // Se você quer um delay antes de mostrar a tela de habilidade.

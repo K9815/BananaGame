@@ -12,13 +12,13 @@ if (device_mouse_check_button_pressed(0, mb_left)) {
         x - largura_hitbox / 2, y - altura_hitbox / 2,
         x + largura_hitbox / 2, y + altura_hitbox / 2)) {
         
-        if (texto == "Iniciar") {
-            if (global.efeitos_ativos) {
-	    audio_play_sound(som_btn, 1, false);
-	}
+        global.musica_ativa = !global.musica_ativa;
 
-			room_goto(Room1);
-			
+        // Atualiza música instantaneamente
+        if (instance_exists(o_som)) {
+            with (o_som) {
+                tocar_musica(global.musica_recurso);
+            }
         }
     }
 }

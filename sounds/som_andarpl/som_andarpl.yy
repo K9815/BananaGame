@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"som_menu",
+  "%Name":"som_andarpl",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,8 +9,8 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":64.0,
-  "name":"som_menu",
+  "duration":0.092562355,
+  "name":"som_andarpl",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"som_menu.wav",
+  "soundFile":"som_andarpl.wav",
   "type":0,
-  "volume":0.9,
+  "volume":0.4,
 }

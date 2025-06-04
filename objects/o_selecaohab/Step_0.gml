@@ -1,5 +1,9 @@
 // TOQUE para selecionar habilidade
 if (device_mouse_check_button_pressed(0, mb_left)) {
+	if (global.efeitos_ativos) {
+			audio_play_sound(som_btn, 1, false);
+		}
+	
     var num_habilidades = array_length(habilidades_exibidas);
     if (num_habilidades == 0) exit;
 

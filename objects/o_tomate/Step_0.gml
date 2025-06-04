@@ -30,6 +30,10 @@ switch (state) {
         break;
 
 	    case "attack":
+		if (global.efeitos_ativos) {
+			audio_play_sound(som_atqtom, 1, false);
+		}
+	
 	    sprite_index = spr_tomatq;
 	    image_speed_base = 0.4;
 
@@ -63,6 +67,9 @@ switch (state) {
 		break;
 
 		case "morte":
+		if (global.efeitos_ativos) {
+			audio_play_sound(som_danopl, 1, false);
+		}
 	    if (image_index >= image_number - 1) {
 	        instance_destroy();
 	    }
@@ -82,6 +89,9 @@ if (jogador != noone)
     {
         if (!ataque_recebido)
         {
+			if (global.efeitos_ativos) {
+			audio_play_sound(som_danopl, 1, false);
+		}
             tomar_dano_tomate(50); 
             ataque_recebido = true;
 			if (instance_exists(o_spawner)) {
