@@ -6,7 +6,7 @@ creditos = [
 	"Curso: Sistemas de Informação, 7° Período - Noturno",
 	"Disciplina: Seminário Temático, Desenvolvimento de jogos, Programação Móvel, Gerenciamento de Projetos",
     "Ano: 2025",
-	"Programação: Gabriel Viana de Carvalho",
+	"Programação: Gabriel Viana de Carvalho e Ryan Vale de Avelar ",
 	"Game Design: Thiago Henrique Coelho da Silva",
 	"Sound Design: Yan Patrick Rodrigues de Moraes",
 	"Game Testers: Letícia Ferreira do Nascimento",
@@ -16,8 +16,7 @@ creditos = [
 	"BananaMan (Jogador):sprite sheet feita por 'Hildemuz' e modificada", 
 	"Tomate (Inimigo):sprite sheet feito por 'Defadaj'",
 	"Cenoura (Inimigo):sprite sheet feito por 'Defadaj'",
-	"Backgrounds:",
-	"Tilesets: Cute Forest feito por 'Nauris, Namatnieks'",
+	"Tilesets e BG: Cute Forest feito por 'Nauris, Namatnieks'",
 
 	"Créditos de Músicas e sons:",
 	"Música de inicio: Freesound 8 bit game loop 002 simple mix 2 long 120 bpm.wav by josefpres",
