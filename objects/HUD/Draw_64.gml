@@ -14,4 +14,9 @@ if (!global.jogo_pausado) {
     // Texto
     draw_set_color(c_white);
     draw_text(20, 45, string(vida) + " / " + string(vida_max));
+
+	if (!instance_exists(o_btn_pausa)) {
+    instance_create_layer(0, 0, "GUI", o_btn_pausa);
+	}
 }
+

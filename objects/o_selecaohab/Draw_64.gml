@@ -39,10 +39,6 @@ for (var i = 0; i < num_habilidades; i++) {
     var rect_right = x_draw + (spr_scaled_width / 2);
     var rect_bottom = y_draw + (spr_scaled_height / 2);
 
-    draw_set_alpha(0.5);
-    draw_set_color(c_blue);
-    draw_rectangle(rect_left, rect_top, rect_right, rect_bottom, false);
-    draw_set_alpha(1);
 
     // Realça a habilidade baseada na variável 'selecionada'
     if (i == selecionada) { 

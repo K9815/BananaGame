@@ -20,9 +20,9 @@ if (device_mouse_check_button_pressed(0, mb_left)) {
             global.jogo_pausado = false;
 			if (room != Room1) {
 				show_debug_message("mec");
-			    room_goto(Room1);
+			    game_restart();
 			} else {
-			    room_restart(); // reinicia Room1 se já estiver nela
+			    game_restart(); // reinicia Room1 se já estiver nela
 				show_debug_message("a");
 }
 		}

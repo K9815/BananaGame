@@ -9,8 +9,10 @@ switch (room) {
 		 tocar_musica(som_gameplay);
         break;
 
-
-        
+	case room_fim:
+	
+		tocar_musica(som_venceu);
+		break;
 
     default:
         if (audio_is_playing(global.musica_atual)) {

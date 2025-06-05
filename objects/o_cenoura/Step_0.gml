@@ -62,9 +62,6 @@ switch (state) {
         break;
 
     case "morte":
-        if (global.efeitos_ativos) {
-            audio_play_sound(som_danopl, 1, false);
-        }
         if (image_index >= image_number - 1) {
             instance_destroy();
         }
@@ -88,6 +85,11 @@ if (!morrendo) {
             if (!ataque_recebido) {
                 tomar_dano_cenoura(50); 
                 ataque_recebido = true;
+				
+			if (jogador.chance_vampirismo > 0 && random(1) < jogador.chance_vampirismo) {
+			jogador.curar(10); // Curar 10 de vida (ajuste conforme quiser)
+			show_debug_message("Vampirismo ativado! Curou 10 de vida.");
+			}
             }
         } else {
             ataque_recebido = false; 

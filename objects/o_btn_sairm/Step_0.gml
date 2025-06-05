@@ -31,7 +31,7 @@ if (device_mouse_check_button_pressed(0, mb_left)) {
 	            instance_destroy(o_fundo_pausa);
 	            instance_destroy();
 	            global.jogo_pausado = false;
-	            room_goto(room_reset);
+	            game_restart();
         }
     }
 }

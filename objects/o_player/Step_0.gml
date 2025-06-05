@@ -6,6 +6,11 @@ if (global.jogo_pausado) {
     exit;
 } 
 
+function curar(valor) {
+    vida_atual += valor;
+    vida_atual = clamp(vida_atual, 0, vida_maxima);
+}
+
 
 switch (state) {
     case "move":
@@ -96,7 +101,8 @@ function tomar_dano(valor) { //FUNÇÃO DE RECEBER DANO, SERVIRÁ TANTO PRO PLAY
 		}
 	
 	if (tempo_invencivel <= 0) {
-        vida_atual -= valor;
+        var dano_modificado = valor * dano_recebido_multiplicador;
+		vida_atual -= dano_modificado;
         tempo_invencivel = 60;
 
        if (vida_atual <= 0) {

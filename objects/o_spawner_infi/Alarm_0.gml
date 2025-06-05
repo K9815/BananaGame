@@ -1,14 +1,8 @@
 // Primeira fase: Fim da Wave / Mostrar Tela de Habilidades
 if (global.jogo_pausado == true && !instance_exists(o_selecaohab)) {
     show_debug_message("Spawner Alarm 0 (Fase 1): Fim de wave detectado. Mostrando tela de habilidades.");
-
-    wave_atual += 1;
-
-    // Verifica se atingiu o limite de waves
-    if (wave_atual > 5) {
-        room_goto(room_fim);
-        exit;
-    }
+    
+    wave_atual += 1; 
 
     var num_habilidades_para_exibir = 3;
     var temp_habilidades_para_sortear_copy = array_create(0);

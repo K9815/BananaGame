@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"som_andarpl",
+  "%Name":"som_venceu",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,8 +9,8 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.092562355,
-  "name":"som_andarpl",
+  "duration":6.519093,
+  "name":"som_venceu",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"som_andarpl.wav",
+  "soundFile":"som_venceu.wav",
   "type":0,
-  "volume":0.4,
+  "volume":1.0,
 }
