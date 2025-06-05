@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"Fundos e Logos",
+    "path":"folders/Sprites/Fundos e Logos.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
