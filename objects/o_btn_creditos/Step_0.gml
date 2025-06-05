@@ -13,5 +13,8 @@ if (device_mouse_check_button_pressed(0, mb_left)) {
         x + largura_hitbox / 2, y + altura_hitbox / 2)) {
         
             room_goto(room_cr);
+			if (global.efeitos_ativos) {
+	    audio_play_sound(som_btn, 1, false);
+		}
         }
     }

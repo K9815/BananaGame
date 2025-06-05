@@ -12,6 +12,9 @@ if (device_mouse_check_button_pressed(0, mb_left)) {
 
         // Impede múltiplos cliques
         if (!global.recomecar_acionado) {
+			if (global.efeitos_ativos) {
+	    audio_play_sound(som_btn, 1, false);
+		}
             global.recomecar_acionado = true;
             show_debug_message("Reiniciando jogo...");
             global.jogo_pausado = false;

@@ -13,6 +13,9 @@ if (device_mouse_check_button_pressed(0, mb_left)) {
         x + largura_hitbox / 2, y + altura_hitbox / 2)) {
         
         if (texto == "Continuar") {
+			if (global.efeitos_ativos) {
+	    audio_play_sound(som_btn, 1, false);
+		}
             instance_destroy(o_menu_pausa);
             instance_destroy(o_btn_sairm);
             instance_destroy(o_fundo_pausa);

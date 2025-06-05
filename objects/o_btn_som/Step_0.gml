@@ -1,8 +1,15 @@
 // Fator de redução da hitbox
 var fator = 0.3;
-
 var largura_hitbox = largura * fator;
 var altura_hitbox = altura * fator;
+
+// Contagem do feedback visual
+if (tempo_feedback > 0) {
+    tempo_feedback -= 1;
+    if (tempo_feedback <= 0) {
+        sprite_index = sprite_normal;
+    }
+}
 
 if (device_mouse_check_button_pressed(0, mb_left)) {
     var mx = device_mouse_x_to_gui(0);
@@ -14,9 +21,12 @@ if (device_mouse_check_button_pressed(0, mb_left)) {
         
         global.efeitos_ativos = !global.efeitos_ativos;
 
-        // Se quiser som de clique, só toca se ainda estiver ativado após o toggle
         if (global.efeitos_ativos) {
             audio_play_sound(som_btn, 1, false);
         }
+
+        // Feedback visual
+        sprite_index = sprite_clicado;
+        tempo_feedback = 10; // Duração do efeito em frames
     }
 }

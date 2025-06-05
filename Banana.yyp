@@ -108,6 +108,7 @@
     {"id":{"name":"ResistenciaAumentada","path":"sprites/ResistenciaAumentada/ResistenciaAumentada.yy",},},
     {"id":{"name":"spr_btn_creditos","path":"sprites/spr_btn_creditos/spr_btn_creditos.yy",},},
     {"id":{"name":"spr_btn_menu","path":"sprites/spr_btn_menu/spr_btn_menu.yy",},},
+    {"id":{"name":"spr_btn_sons_apr","path":"sprites/spr_btn_sons_apr/spr_btn_sons_apr.yy",},},
     {"id":{"name":"spr_btn_sons","path":"sprites/spr_btn_sons/spr_btn_sons.yy",},},
     {"id":{"name":"spr_btn","path":"sprites/spr_btn/spr_btn.yy",},},
     {"id":{"name":"spr_btnatq","path":"sprites/spr_btnatq/spr_btnatq.yy",},},

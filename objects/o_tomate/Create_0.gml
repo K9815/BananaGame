@@ -1,6 +1,6 @@
 image_speed = 0.2;
 state = "idle";
-
+ataque_realizado = false;
 vida_maxima = 100;
 vida_atual = vida_maxima;
 velocidade = 1.5 + random_range(-0.3, 0.3);

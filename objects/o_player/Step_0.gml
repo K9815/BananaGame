@@ -44,10 +44,6 @@ switch (state) {
 
         // --- Animação ---
          if (_h_input != 0) {
-			 if (global.efeitos_ativos) {
-			audio_play_sound(som_andarpl, 1, false);
-			
-		}
             sprite_index = spr_plwalk;
             image_speed = 0.2;
             image_xscale = sign(_h_input) * 2;

@@ -19,6 +19,9 @@ if (device_mouse_check_button_pressed(0, mb_left)) {
             instance_destroy();
             global.jogo_pausado = false;
         } else {
+			if (global.efeitos_ativos) {
+	    audio_play_sound(som_btn, 1, false);
+		}
                 instance_destroy(o_menu_pausa);
 				instance_destroy(o_btn_cont);
 				instance_destroy(o_tela_morte);

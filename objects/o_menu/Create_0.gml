@@ -3,8 +3,8 @@ var centro_x = display_get_gui_width() / 2;
 var centro_y = display_get_gui_height() / 2 + 100; // levemente mais baixo, ajuste como quiser
 
 // Define espaçamento horizontal entre os botões
-var espacamento = 220;
-var escala = 3;
+var espacamento = 300;
+var escala = 4;
 
 // Limpa botões antigos ao retornar para o menu
 with (o_btnini) instance_destroy();
