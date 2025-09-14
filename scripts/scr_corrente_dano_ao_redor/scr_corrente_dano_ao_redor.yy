@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_corrente_dano_ao_redor",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_corrente_dano_ao_redor",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

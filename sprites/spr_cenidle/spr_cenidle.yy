@@ -48,8 +48,8 @@
   },
   "origin":9,
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"enemy_cen",
+    "path":"folders/Sprites/enemy_cen.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

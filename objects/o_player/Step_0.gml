@@ -1,43 +1,68 @@
+// o_player - Evento Step (Código fornecido com a correção de _joy_h)
+
+// Sai se o jogo estiver pausado
 if (global.jogo_pausado) {
-    image_speed = 0; // Pausa a animação da sprite, mas mantém o frame atual
-    exit; // Impede movimento, ataque, etc.
+    image_speed = 0;
+    exit;
+} 
+
+function curar(valor) {
+    vida_atual += valor;
+    vida_atual = clamp(vida_atual, 0, vida_maxima);
 }
 
 
 switch (state) {
     case "move":
         #region Move State
-        var speedmov = 3;
+        var speedmov = 3; // Sua velocidade de movimento base
+		
+        var _joy_h = 0; // Inicializa com 0
+        if (instance_exists(o_joystick)) { // Verifica se o joystick existe
+            var _jx = o_joystick.joy_x;    // Pega o deslocamento X do "thumb" do joystick
+            var _jr = o_joystick.radius;   // Pega o raio do joystick
+            if (_jr != 0) { // Evita divisão por zero
+                _joy_h = _jx / _jr; // Calcula o input H normalizado (-1 a 1)
+            }
+        }
+		//teclado pc
+        var _keyb_h = keyboard_check(vk_right) - keyboard_check(vk_left);
 
-        // Movimento para a esquerda
-        if ((keyboard_check(vk_left) || keyboard_check(ord("A"))) && !place_meeting(x - speedmov, y, o_parede)) {
-            x -= speedmov;
-            image_xscale = -2;
-            sprite_index = spr_plwalk;
-            image_speed = 0.2;
+        // Combina os inputs (dando prioridade ao maior, ou some se preferir)
+        var _h_input = 0;
+        if (abs(_joy_h) > abs(_keyb_h)) { // Agora _joy_h tem um valor!
+            _h_input = _joy_h;
+        } else {
+            _h_input = _keyb_h;
+        }
+        // Garante que o input não passe de -1 ou 1
+        _h_input = clamp(_h_input, -1, 1);
+
+        // --- Calcula o movimento ---
+        var _move_x = _h_input * speedmov;
+        var _move_y = 0; // SEMPRE ZERO!
+
+        // --- Colisão ---
+        if (!place_meeting(x + _move_x, y, o_parede)) {
+            x += _move_x;
         }
 
-        // Movimento para a direita
-        else if ((keyboard_check(vk_right) || keyboard_check(ord("D"))) && !place_meeting(x + speedmov, y, o_parede)) {
-            x += speedmov;
-            image_xscale = 2;
+        // --- Animação ---
+         if (_h_input != 0) {
             sprite_index = spr_plwalk;
             image_speed = 0.2;
-        }
-
-        // Sem movimento
-        else {
+            image_xscale = sign(_h_input) * 2;
+        } else {
             sprite_index = spr_plidle;
             image_speed = 0.2;
         }
 
-        // Ataque
-        if (keyboard_check_pressed(vk_lshift)) {
+        // --- VERIFICA O ATAQUE ---
+        if (global.ataque_pressionado || keyboard_check_pressed(vk_lshift)) {
             image_index = 0;
             state = "attack one";
             image_speed = 0.6;
         }
-
 
         if (tempo_invencivel > 0) {
             tempo_invencivel -= 1;
@@ -48,21 +73,43 @@ switch (state) {
 
     case "attack one":
         #region Attack State
-        sprite_index = spr_platq;
+		 if (global.efeitos_ativos) {
+			audio_play_sound(som_atqpl, 1, false);
+		}
+        sprite_index = spr_platq; // Seu sprite de ataque
+        image_speed = 0.6;
 
-        // Após a animação de ataque, volta para o estado move
-        if (image_index >= image_number - 1) {
-            state = "move";
+        if (image_index >= image_number - 1) { // Quando a animação de ataque terminar
+            state = "move"; // Volta para o estado de movimento
         }
         #endregion
         break;
 		
-	case "dead":
-    #region Dead State
-    if (image_index >= image_number - 1) {
-        room_restart(); 
-    }
-    #endregion
-    break;
 
+    case "dead":
+        #region Dead State
+        // Supondo que você tenha uma animação de morte
+        if (image_index >= image_number - 1) { // Quando a animação de morte terminar
+		}
+        #endregion
+        break;
+}
+
+function tomar_dano(valor) { //FUNÇÃO DE RECEBER DANO, SERVIRÁ TANTO PRO PLAYER QUANTO PROS INIMIGOS , NÃO APAGAR
+    if (global.efeitos_ativos) {
+			audio_play_sound(som_danopl, 1, false);
+		}
+	
+	if (tempo_invencivel <= 0) {
+        var dano_modificado = valor * dano_recebido_multiplicador;
+		vida_atual -= dano_modificado;
+        tempo_invencivel = 60;
+
+       if (vida_atual <= 0) {
+            state = "dead";
+            image_index = 0;
+            sprite_index = spr_pldeath; 
+            image_speed = 0.2;
+        }
+    }
 }

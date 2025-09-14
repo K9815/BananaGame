@@ -1,25 +1,26 @@
 image_speed = 0.2;
 
-// Estado inicial
-state = "move";
-
-// Vida do jogador
+// Vida
 vida_maxima = 100;
 vida_atual = vida_maxima;
+vida_maxima_base = vida_maxima;
 
-// Tempo de invencibilidade
+// Invencibilidade
 tempo_invencivel = 0;
 
-function tomar_dano(valor) {
-    if (tempo_invencivel <= 0) {
-        vida_atual -= valor;
-        tempo_invencivel = 30;
+// Estado de controle
+state = "move";
 
-       if (vida_atual <= 0) {
-            state = "dead";
-            image_index = 0;
-            sprite_index = spr_pldeath; 
-            image_speed = 0.2;
-        }
-    }
-}
+// Controle de ataque
+cooldown_ataque = 30; // Tempo entre ataques em frames
+
+// Resistência
+dano_recebido_multiplicador = 1.0;
+
+// Vampirismo
+chance_vampirismo = 0.0;
+
+// Corrente Elétrica
+has_corrente_eletrica = false;
+qtd_corrente_eletrica = 0;
+correnteele_nivel = 0;
